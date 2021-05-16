@@ -8,8 +8,8 @@
     <title>지원 사이트</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
-    <p style="background-image:url(http://www.matcl.com/files/attach/images/2791205/010/801/002/61d156f2fbc9de51d589197de301e131.jpg);"></p>
+<body style="background-image:url(http://www.matcl.com/files/attach/images/2791205/010/801/002/61d156f2fbc9de51d589197de301e131.jpg);">
+    
 
     {% for recruit in recruits.all %}
         <a href="{% url 'detail' recruit.id %}">{{recruit.name}}</a>
