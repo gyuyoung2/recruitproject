@@ -27,9 +27,8 @@ h4{
     font-family: 'twayair';
 }
 
-body{
-    background: url({% static 'hello.jpg' %});
-}
+/* body{
+    background: url({% static 'hello.jpg' %}); */
 
 a{
     font-family: 'CookieRun-Regular';
