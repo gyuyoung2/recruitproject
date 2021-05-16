@@ -28,7 +28,7 @@ h4{
 }
 
 body{
-    background-image: url('http://www.matcl.com/files/attach/images/2791205/010/801/002/61d156f2fbc9de51d589197de301e131.jpg');
+    background: url({% static 'hello.jpg' %});
 }
 
 a{
