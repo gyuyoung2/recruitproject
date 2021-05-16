@@ -19,8 +19,8 @@ from post import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name = "home"),
-    path('detail/<int:recruit_id>', views.detail, name = "detail"),
+    path('', views.home, name = 'home'),
+    path('detail/<int:recruit_id>', views.detail, name = 'detail'),
     path('create/', views.create, name = "create"),
     path('update/<int:recruit_id>/', views.update, name= 'update'),
     path('delete/<int:recruit_id>/', views.delete, name='delete'),
