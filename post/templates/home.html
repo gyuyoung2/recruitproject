@@ -12,9 +12,9 @@
     
 
     {% for recruit in recruits.all %}
-        <a href="{% url 'detail' recruit.id %}">{{recruit.name}}</a>
-        <a href="{% url 'update' recruit.id %}"><span>수정</span></a>
-        <a href="{% url 'delete' recruit.id %}"><span>삭제</span></a>
+        <a style="color: black;" href="{% url 'detail' recruit.id %}">{{recruit.name}}</a>
+        <a style="color: blueviolet;" href="{% url 'update' recruit.id %}"><span>수정</span></a>
+        <a style="color: red;" href="{% url 'delete' recruit.id %}"><span>삭제</span></a>
     {% endfor %}
     
     <a href="{% url 'create' %}">지원하기</a>
