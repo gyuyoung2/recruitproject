@@ -15,7 +15,7 @@ def detail(request,recruit_id):
 
 def create(request):
     if request.method == 'POST':
-        form = CreatePostForm(request.POST)
+        form = CreatePostForm(request.POST, request.FILES)
         if form.is_valid():
             recruit = form.save(commit=False)
             recruit.pub_date = timezone.datetime.now()
@@ -28,7 +28,7 @@ def create(request):
 def update(request, recruit_id):
     recruit = Recruit.objects.get(id=recruit_id)
     if request.method == "POST":
-        form = CreatePostForm(request.POST, instance=recruit)
+        form = CreatePostForm(request.POST, request.FILES, instance=recruit)
         if form.is_valid():
             recruit = form.save()
             return redirect('/detail/' + str(recruit.id))

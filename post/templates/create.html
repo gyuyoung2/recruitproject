@@ -1,5 +1,20 @@
-<form action="" method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="제출">    
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지원서 작성</title>
+</head>
+<body style="background-color: skyblue;">
+    
+    <center>
+        <h3 style="font-size: 25px;">지원서 작성</h3>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="제출">    
+        </form>
+    </center>    
+</body>
+</html>

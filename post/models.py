@@ -16,3 +16,4 @@ class Recruit(models.Model):
     pub_date = models.DateTimeField('date published')
     body = models.TextField()
     
+    image = models.ImageField(upload_to="post_img/")

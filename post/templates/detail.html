@@ -1,7 +1,24 @@
 {% load static %}
-<h3>{{recruit_detail.name}}</h3>
-<h3>{{recruit_detail.age}}</h3>
-<h3>{{recruit_detail.gender}}</h3>
-<h3>{{recruit_detail.body}}</h3>
-<h4>{{recruit_detail.pub_date}}</h4>
-<a href="{% url 'home' %}">홈으로 가기</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>지원 내용</title>
+</head>
+<body style="background-color: skyblue;">
+    <center>
+        <h3>{{recruit_detail.name}}</h3>
+        <p><img src="{{ recruit_detail.image.url }}" alt="" height="150" width="140"></p>
+        <h3>{{recruit_detail.age}}</h3>
+        <h3>{{recruit_detail.gender}}</h3>
+        <h3>{{recruit_detail.body}}</h3>
+        <h4>{{recruit_detail.pub_date}}</h4>
+        <img src="https://ivdesign.co.kr/data/file/symbol_logo/data_symbol_logo_champ.jpg" alt="" height="50" width="170"><br>
+        <a href="{% url 'home' %}">홈으로 가기</a>
+    </center> 
+</body>
+</html>
+

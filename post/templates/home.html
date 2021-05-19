@@ -8,15 +8,28 @@
     <title>지원 사이트</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body style="background: url({% static 'hello.jpg' %});">
-    
 
-    {% for recruit in recruits.all %}
-        <a style="color: black;" href="{% url 'detail' recruit.id %}">{{recruit.name}}</a>
-        <a style="color: blueviolet;" href="{% url 'update' recruit.id %}"><span>수정</span></a>
-        <a style="color: red;" href="{% url 'delete' recruit.id %}"><span>삭제</span></a>
-    {% endfor %}
-    
-    <a href="{% url 'create' %}">지원하기</a>
+<center>
+    <h3 style="font-size: 30px;">도라에몽 연기자 모집</h3>
+</center>
+    <body style="background:antiquewhite;">
+        
+        <p style="position: fixed;"><iframe src="https://coupa.ng/bZUkUP" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe></p>
+        <center>
+            {% for recruit in recruits.all %}
+                <div class="left">
+                    <img src="{{ recruit.image.url }}"
+                        alt="" height="150" width="140"><br>
+                    <a style="color: black;" href="{% url 'detail' recruit.id %}">{{recruit.name}}</a>
+                    <p>나이: {{recruit.age}}</p>
+                    <p>성별: {{recruit.gender}}</p>
+                    <p>자기소개: {{recruit.body}}</p>
+                    <a style="color: blueviolet;" href="{% url 'update' recruit.id %}"><span>수정</span></a>
+                    <a style="color: red;" href="{% url 'delete' recruit.id %}"><span>삭제</span></a>
+                </div>
+            {% endfor %}
+            <a href="{% url 'create' %}">지원하기</a>
+</center>
+
 </body>
 </html>

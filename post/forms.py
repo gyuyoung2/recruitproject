@@ -5,5 +5,5 @@ from .models import Recruit
 class CreatePostForm(forms.ModelForm):
     class Meta:
         model = Recruit
-        fields = ['name','age','gender','body']
+        fields = ['name','age','gender','body','image']
     

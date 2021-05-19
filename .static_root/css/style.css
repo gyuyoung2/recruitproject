@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: 'Wemakeprice-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'twaysky';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
     font-weight: normal;
@@ -20,20 +27,36 @@
 }
 
 h3{
-    font-family: 'twaysky';
+    font-family: 'Wemakeprice-Bold';
 }
 
 h4{
-    font-family: 'twayair';
+    font-family: 'Wemakeprice-Bold';
 }
 
-body{
-    background: url({% static 'hello.jpg' %});
-}
+/* body{
+    background: url({% static 'hello.jpg' %}); */
 
 a{
     font-family: 'CookieRun-Regular';
+    
 }
+
+p{
+    font-family: 'twayair';
+}
+.right{
+    float: right;
+    width: 100%;
+    position: fixed;
+}
+.left{
+    width: 30%;
+    background-color: azure;
+    margin: 5px;
+}
+
+
 
 
 
